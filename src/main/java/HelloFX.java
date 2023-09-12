@@ -6,12 +6,19 @@ import javafx.stage.Stage;
 
 public class HelloFX extends Application {
 
+    private String properties(String... names) {
+        var sb = new StringBuilder();
+        for (var name: names) {
+            if (! sb.isEmpty()) sb.append("\n");
+            sb.append(name).append(": ").append(System.getProperty(name));
+        }
+        return sb.toString();
+    }
+
     @Override
     public void start(Stage stage) {
-        String javaVersion = System.getProperty("java.version");
-        String javafxVersion = System.getProperty("javafx.version");
-        Label l = new Label("Hello, JavaFX " + javafxVersion + ", running on Java " + javaVersion + ".");
-        Scene scene = new Scene(new StackPane(l), 640, 480);
+        var l = new Label(properties("java.version", "javafx.version", "javaplugin.version", "javawebstart.version"));
+        var scene = new Scene(new StackPane(l), 640, 480);
         stage.setScene(scene);
         stage.show();
     }
