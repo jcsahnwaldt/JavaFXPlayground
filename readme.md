@@ -1,3 +1,3 @@
 # JavaFXPlayground
 
-Slightly modified copy of [/openjfx/samples/tree/master/HelloFX/Gradle/hellofx](https://github.com/openjfx/samples/tree/master/HelloFX/Gradle/hellofx).
+Slightly modified copy of the [OpenJFX HelloFX Gradle sample](https://github.com/openjfx/samples/tree/master/HelloFX/Gradle/hellofx).
